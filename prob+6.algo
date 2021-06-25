@@ -1,0 +1,18 @@
+ALGORITHM trie_insertion
+VARIABLE
+t : arrayof INTEGER[10];
+i, j, k : INTEGER;
+BEGIN
+j←2
+while (j<=longueur(t))   //boucle 1
+  i←j-1
+  k←t[j]
+  while (i>0 et que t[i]>k)   //boucle 2
+    t[i+1]←t[i]
+    i←i-1
+  END_WHILE
+  t[i+1]←k
+  j←j+1
+END_WHILE
+END
+			
